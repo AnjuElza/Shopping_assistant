@@ -1,0 +1,126 @@
+.App {
+  text-align: center;
+}
+.main-heading{
+  text-align: center;
+  color:darkblue;
+  background-color:rgb(189, 205, 82);
+}
+.navbar{
+ justify-content: space-evenly;
+ background-color: floralwhite;
+  
+}
+.mixer-picture {
+  height: 200px;
+  width: 350px;
+  object-fit: contain;
+  margin-top: 10px;
+}
+
+.mixer-container {
+  background-color:ghostwhite;
+  width: 600px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: rgb(0 0 0 / 24%) 1px 2px 13px;
+  text-align: center;
+}
+
+.mixer-name {
+  padding: 10px;
+  /*font-size: 48px;*/
+  margin-bottom: 0px;
+
+  /* font-weight: bold; */
+}
+
+.mixer-company {
+  /* padding: 16px; */
+  font-size: 32px;
+  color: grey;
+  /* font-weight: bold; */
+  margin-top: 0px;
+}
+
+.button-view-details{
+margin-bottom: 10px;
+text-align: center;
+}
+
+body {
+  background-color: whitesmoke;
+  font-family: Roboto;
+  margin: 16px;
+}
+
+.mixer-list-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  margin: 24px;
+  height:min-content;
+  /* background-color: white; */
+}
+.data-container{
+  
+  width:100%;
+}
+.data-table{
+  border: 1px solid black ;
+  border-collapse: separate;
+  width: 96%;
+  height: 150px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  background-color:aliceblue;
+}
+.data-table th{
+  width: 19%;
+  border: 1px solid black ;
+   border-collapse:collapse;
+}
+.data-table td{
+  word-break:break-all;
+  width: 100px;
+  border: 1px solid black ;
+   border-collapse:collapse;
+   
+}
+.footer{
+  float: right;
+  padding: 20px;
+  background-color: floralwhite;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
