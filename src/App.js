@@ -58,7 +58,8 @@ const mixers = [
  }
 ];
 
-const API="http://localhost:4000";
+// const API="http://localhost:4000";
+const API="https://easy-ray-slippers.cyclic.app";
 
 function App() {
   const [show, setShow]= useState(true);
