@@ -1,6 +1,5 @@
 //import logo from './logo.svg';
-import React from 'react';
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import { ReactSearchAutocomplete } from 'react-search-autocomplete';
 import Pagination from '@mui/material/Pagination';
@@ -119,7 +118,10 @@ function App() {
       onFocus={handleOnFocus}
       autoFocus
       formatResult={formatResult}
-      onChange = {(event)=>setSearch(event.target.value)&& setActive("searchResult")}
+      onChange={(event) => {
+          setSearch(event.target.value);
+          setActive("searchResult");
+      }}
       placeholder="Search" />
       </div>
 
