@@ -65,13 +65,17 @@ function App() {
   const [activeIndex, setActiveIndex] = useState(null);
   const [search, setSearch]= useState("");
   const [active, setActive]= useState("ProductList");
- 
-   const handleOnSearch = (string, results) => {
-    // onSearch will have as the first callback parameter
-    // the string searched and for the second the results.
-    console.log(string, results)
+ const [filteredMixers, setFilteredMixers] = useState([]);
   
-  }
+  const handleOnSearch = (string, results) => {
+  // Filter the mixers array based on the search query
+  const filteredResults = mixers.filter(
+    (mxr) => mxr.title.toLowerCase().includes(string.toLowerCase())
+  );
+
+  // Update the filteredMixers state with the filtered results
+  setFilteredMixers(filteredResults);
+};
 
   const handleOnHover = (result) => {
     // the item hovered
@@ -137,7 +141,8 @@ function App() {
        */}
       
       {/* {active === "ProductList" && */}
-        
+        {active === "ProductList" &&
+  (search === "" ? (
 
           {mixers.map((mxr) => (
 
@@ -156,6 +161,24 @@ function App() {
 
             </div>
           ))}
+)
+) : (
+  filteredMixers.map((mxr) => (
+    <div className="mixer-container">
+              <Mixer mixers={mxr} />
+              <button className="button-view-details"
+                onClick={() => {
+                  setActiveIndex(mxr.id);
+                  if (activeIndex === mxr.id) {
+                    setShow(!show);
+                  }
+                } }>
+                View Details
+              </button>
+              {show && (activeIndex === mxr.id) ? <MixerDetails id={mxr.id} /> : null}
+
+            </div>
+          ))
           </div>
         </div>
 
